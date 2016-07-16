@@ -1,0 +1,3 @@
+#! /bin/bash
+
+psql -U metrics_server -d metrics_server
