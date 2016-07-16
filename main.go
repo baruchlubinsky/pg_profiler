@@ -128,7 +128,7 @@ func main() {
 				if d > max {
 					max = d
 				}
-				fmt.Printf("Current delay: %v - Max delay: %v             \r", d, max)
+				fmt.Printf("\rCurrent delay: %v - Max delay: %v             ", d, max)
 			} else {
 				fmt.Println("no data")
 			}
