@@ -89,7 +89,7 @@ func main() {
 	res, err := db.Exec(`CREATE TABLE points (
 		signal_id integer,
 		timestamp timestamp,
-		content   varchar(200),
+		content   jsonb,
 		PRIMARY KEY(signal_id, timestamp)
 		)
 		`)
@@ -132,6 +132,7 @@ func main() {
 			} else {
 				fmt.Println("no data")
 			}
+			rows.Close()
 
 			time.Sleep(10 * time.Second)
 		}
